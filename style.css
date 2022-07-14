@@ -12,3 +12,9 @@ body {
   margin: 0 auto;
   padding: 300px 0;
 }
+
+.wheelinator {
+  margin: 0 auto;
+  width: 800px;
+  height: 800px;
+}
