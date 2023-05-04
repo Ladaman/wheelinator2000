@@ -1,6 +1,7 @@
 class Wheelinator2000 {
   constructor(config = {}) {
-    this.spinButton = config.spinButton || document.querySelector("#spin-button") || "";
+    this.spinButton =
+      config.spinButton || document.querySelector("#spin-button") || "";
     this.layerNodes = [
       document.querySelector("#wheel-layer-0"),
       document.querySelector("#wheel-layer-1"),
@@ -17,12 +18,15 @@ class Wheelinator2000 {
     const currLayerChildren = this.layerNodes[layer].children[0].children;
     for (let i = 0; i < currLayerChildren.length; i++) {
       const element = currLayerChildren[i];
-      element.style.transform = `rotate(${(360 / currLayerChildren.length) * i}deg)`;
-      element.style.width = `${(100 / currLayerChildren.length) * 3.1}%`;
+      element.style.transform = `rotate(${
+        (360 / currLayerChildren.length) * i
+      }deg)`;
+      element.style.width = `${(100 / currLayerChildren.length) * 3.14}%`;
       element.style.zIndex = i;
     }
     this.layerNodes[layer].style.transform = "rotate(0deg)";
-    this.layerNodes[layer].style.animationDuration = this.animationTiming[layer] + "s";
+    this.layerNodes[layer].style.animationDuration =
+      this.animationTiming[layer] + "s";
   };
 
   initWheel = () => {
@@ -52,7 +56,9 @@ class Wheelinator2000 {
     );
     this.savedSpinValues[layer] += spinValue;
     setTimeout(() => {
-      this.layerNodes[layer].style.transform = `rotate(${this.savedSpinValues[layer]}deg)`;
+      this.layerNodes[
+        layer
+      ].style.transform = `rotate(${this.savedSpinValues[layer]}deg)`;
     }, 500);
   };
 

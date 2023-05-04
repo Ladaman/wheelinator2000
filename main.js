@@ -6,11 +6,9 @@ let wheel = new Wheelinator2000({
   //   spinButton: document.querySelector("#traki-button"),
 });
 
-console.log(wheel);
 wheel.initWheel();
 
-document.querySelector("#traki-button").addEventListener("click", function () {
+document.querySelector("#spin-button").addEventListener("click", function () {
   wheel.spinButton = this;
-  wheel.start(5, 3);
-  console.log(this);
+  wheel.start(5, 2);
 });
