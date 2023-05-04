@@ -1,1 +1,142 @@
-.wheelinator{display:flex;align-items:center;justify-content:center;position:relative;z-index:1;overflow:hidden}.wheelinator-layer-common{border-radius:50%;-webkit-animation-fill-mode:forwards;animation-fill-mode:forwards;animation-timing-function:cubic-bezier(0.44, -0.105, 0, 1.07);-webkit-animation-timing-function:cubic-bezier(0.44, -0.105, 0, 1.07);transform:translateZ(0);position:absolute}.wheelinator-layer-0{width:100%;height:100%;background-color:gray;z-index:3}.wheelinator-layer-0.active{-webkit-animation-name:spinning-0;animation-name:spinning-0}.wheelinator-layer-1{width:70%;height:70%;z-index:6}.wheelinator-layer-1.active{-webkit-animation-name:spinning-1;animation-name:spinning-1}.wheelinator-layer-2{width:43%;height:43%;z-index:9}.wheelinator-layer-2.active{-webkit-animation-name:spinning-2;animation-name:spinning-2}.wheelinator__anker{width:100%;height:100%;border-radius:50%;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center}.wheelinator__section{height:100%;width:42.9%;position:absolute}.wheelinator__section-half{width:100%;height:50%;padding-top:5%;display:flex;justify-content:center}.wheelinator__section:nth-child(0) .wheelinator__section-half{background:#55dc82}.wheelinator__section:nth-child(1) .wheelinator__section-half{background:#851f07}.wheelinator__section:nth-child(2) .wheelinator__section-half{background:#0cf907}.wheelinator__section:nth-child(3) .wheelinator__section-half{background:#7f455e}.wheelinator__section:nth-child(4) .wheelinator__section-half{background:#b83eaf}.wheelinator__section:nth-child(5) .wheelinator__section-half{background:#5a1927}.wheelinator__section:nth-child(6) .wheelinator__section-half{background:#294d29}.wheelinator__section:nth-child(7) .wheelinator__section-half{background:#66b1af}.wheelinator__section:nth-child(8) .wheelinator__section-half{background:#b496e2}.wheelinator__section:nth-child(9) .wheelinator__section-half{background:#47a221}.wheelinator__section:nth-child(10) .wheelinator__section-half{background:#8029bb}.wheelinator__section:nth-child(11) .wheelinator__section-half{background:#688743}.wheelinator__section:nth-child(12) .wheelinator__section-half{background:#3d975f}.wheelinator__section:nth-child(13) .wheelinator__section-half{background:#52bdee}.wheelinator__section:nth-child(14) .wheelinator__section-half{background:#50a19b}.wheelinator__section:nth-child(15) .wheelinator__section-half{background:#9b96f3}.wheelinator__section:nth-child(16) .wheelinator__section-half{background:#301ad6}.wheelinator__section:nth-child(17) .wheelinator__section-half{background:#49ab18}.wheelinator__section:nth-child(18) .wheelinator__section-half{background:#f3b8b9}.wheelinator__section:nth-child(19) .wheelinator__section-half{background:#931046}.wheelinator__button{width:15%;height:15%;border-radius:50%;cursor:pointer;background-color:green;position:absolute;z-index:12}.wheelinator__button.inactive{background-color:gray;pointer-events:none;cursor:default}
+.wheelinator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.wheelinator-layer-common {
+  border-radius: 50%;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.44, -0.105, 0, 1.07);
+  -webkit-animation-timing-function: cubic-bezier(0.44, -0.105, 0, 1.07);
+  transform: translateZ(0);
+  position: absolute;
+}
+.wheelinator-layer-0 {
+  width: 100%;
+  height: 100%;
+  background-color: gray;
+  z-index: 3;
+}
+.wheelinator-layer-0.active {
+  -webkit-animation-name: spinning-0;
+  animation-name: spinning-0;
+}
+.wheelinator-layer-1 {
+  width: 70%;
+  height: 70%;
+  z-index: 6;
+}
+.wheelinator-layer-1.active {
+  -webkit-animation-name: spinning-1;
+  animation-name: spinning-1;
+}
+.wheelinator-layer-2 {
+  width: 43%;
+  height: 43%;
+  z-index: 9;
+}
+.wheelinator-layer-2.active {
+  -webkit-animation-name: spinning-2;
+  animation-name: spinning-2;
+}
+.wheelinator__anker {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wheelinator__section {
+  height: 100%;
+  width: 42.9%;
+  position: absolute;
+}
+.wheelinator__section-half {
+  width: 100%;
+  height: 50%;
+  padding-top: 5%;
+  display: flex;
+  justify-content: center;
+  clip-path: polygon(50% 100%, -2% 0, 102% 0);
+}
+.wheelinator__section:nth-child(0) .wheelinator__section-half {
+  background: #55dc82;
+}
+.wheelinator__section:nth-child(1) .wheelinator__section-half {
+  background: #851f07;
+}
+.wheelinator__section:nth-child(2) .wheelinator__section-half {
+  background: #0cf907;
+}
+.wheelinator__section:nth-child(3) .wheelinator__section-half {
+  background: #7f455e;
+}
+.wheelinator__section:nth-child(4) .wheelinator__section-half {
+  background: #b83eaf;
+}
+.wheelinator__section:nth-child(5) .wheelinator__section-half {
+  background: #5a1927;
+}
+.wheelinator__section:nth-child(6) .wheelinator__section-half {
+  background: #294d29;
+}
+.wheelinator__section:nth-child(7) .wheelinator__section-half {
+  background: #66b1af;
+}
+.wheelinator__section:nth-child(8) .wheelinator__section-half {
+  background: #b496e2;
+}
+.wheelinator__section:nth-child(9) .wheelinator__section-half {
+  background: #47a221;
+}
+.wheelinator__section:nth-child(10) .wheelinator__section-half {
+  background: #8029bb;
+}
+.wheelinator__section:nth-child(11) .wheelinator__section-half {
+  background: #688743;
+}
+.wheelinator__section:nth-child(12) .wheelinator__section-half {
+  background: #3d975f;
+}
+.wheelinator__section:nth-child(13) .wheelinator__section-half {
+  background: #52bdee;
+}
+.wheelinator__section:nth-child(14) .wheelinator__section-half {
+  background: #50a19b;
+}
+.wheelinator__section:nth-child(15) .wheelinator__section-half {
+  background: #9b96f3;
+}
+.wheelinator__section:nth-child(16) .wheelinator__section-half {
+  background: #301ad6;
+}
+.wheelinator__section:nth-child(17) .wheelinator__section-half {
+  background: #49ab18;
+}
+.wheelinator__section:nth-child(18) .wheelinator__section-half {
+  background: #f3b8b9;
+}
+.wheelinator__section:nth-child(19) .wheelinator__section-half {
+  background: #931046;
+}
+.wheelinator__button {
+  width: 15%;
+  height: 15%;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: green;
+  position: absolute;
+  z-index: 12;
+}
+.wheelinator__button.inactive {
+  background-color: gray;
+  pointer-events: none;
+  cursor: default;
+}

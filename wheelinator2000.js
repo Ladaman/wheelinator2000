@@ -1,6 +1,7 @@
 class Wheelinator2000 {
   constructor(config = {}) {
-    this.spinButton = config.spinButton || document.querySelector("#spin-button") || "";
+    this.spinButton =
+      config.spinButton || document.querySelector("#spin-button") || "";
     this.layerNodes = [
       document.querySelector("#wheel-layer-0"),
       document.querySelector("#wheel-layer-1"),
@@ -17,20 +18,25 @@ class Wheelinator2000 {
     const currLayerChildren = this.layerNodes[layer].children[0].children;
     for (let i = 0; i < currLayerChildren.length; i++) {
       const element = currLayerChildren[i];
-      element.style.transform = `rotate(${(360 / currLayerChildren.length) * i}deg)`;
-      element.style.width = `${(100 / currLayerChildren.length) * 3.1}%`;
+      element.style.transform = `rotate(${
+        (360 / currLayerChildren.length) * i
+      }deg)`;
+      element.style.width = `${(100 / currLayerChildren.length) * 3.14}%`;
       element.style.zIndex = i;
     }
     this.layerNodes[layer].style.transform = "rotate(0deg)";
-    this.layerNodes[layer].style.animationDuration = this.animationTiming[layer] + "s";
+    this.layerNodes[layer].style.animationDuration =
+      this.animationTiming[layer] + "s";
   };
 
+  // method that initialises the wheel
   initWheel = () => {
     for (let i = 0; i < this.layers; i++) {
       this.initLayer(i);
     }
   };
 
+  // method that sets the keyframes for the animation
   setAnimationKeyframe = (winner, layer) => {
     const currLayerChildren = this.layerNodes[layer].children[0].children;
     const spinValue =
@@ -52,11 +58,13 @@ class Wheelinator2000 {
     );
     this.savedSpinValues[layer] += spinValue;
     setTimeout(() => {
-      this.layerNodes[layer].style.transform = `rotate(${this.savedSpinValues[layer]}deg)`;
+      this.layerNodes[
+        layer
+      ].style.transform = `rotate(${this.savedSpinValues[layer]}deg)`;
     }, 500);
   };
 
-  //
+  // method that starts the animation
   spin = (winner, layer) => {
     if (
       winner <= 0 ||
@@ -72,77 +80,5 @@ class Wheelinator2000 {
     setTimeout(() => {
       this.layerNodes[layer].classList.add("active");
     }, 10);
-  };
-
-  // start = (winner, layer) => {
-  //   this.spinButton.classList.add("inactive");
-  //   switch (layer) {
-  //     case 0:
-  //       this.spin(9, 0);
-  //       break;
-  //     case 1:
-  //       this.spin(1, 0);
-  //       setTimeout(() => {
-  //         this.spin(winner, layer);
-  //       }, [this.animationTiming[layer - 1] + 1] * 1000);
-  //       break;
-  //     case 2:
-  //       this.spin(1, 0);
-  //       setTimeout(() => {
-  //         this.spin(1, 1);
-  //         setTimeout(() => {
-  //           this.spin(winner, layer);
-  //         }, [this.animationTiming[layer - 1] + 1] * 1000);
-  //       }, [this.animationTiming[layer - 2] + 1] * 1000);
-  //       break;
-
-  //     default:
-  //       console.log("something went wrong");
-  //       break;
-  //   }
-  // };
-  start = (winner, layer) => {
-    this.spinButton.classList.add("inactive");
-    for (let i = 0; i < this.layers; i++) {
-      let delay = 0;
-      // console.log(`level is ${i}`);
-      for (let j = i; j >= 0; j--) {
-        if (j === 0) {
-          continue;
-        }
-        delay += this.animationTiming[j];
-        // console.log(`delay inside j = ${delay},${this.animationTiming[j]}`);
-        // console.log(`this is wheel level ${i} and delay is ${delay}`);
-      }
-      console.log(delay);
-      setTimeout(() => {
-        this.spin(winner, i);
-      }, delay * 1000);
-      // console.log(this.animationTiming[i]);
-    }
-    // switch (layer) {
-    //   case 0:
-    //     this.spin(9, 0);
-    //     break;
-    //   case 1:
-    //     this.spin(1, 0);
-    //     setTimeout(() => {
-    //       this.spin(winner, layer);
-    //     }, [this.animationTiming[layer - 1] + 1] * 1000);
-    //     break;
-    //   case 2:
-    //     this.spin(1, 0);
-    //     setTimeout(() => {
-    //       this.spin(1, 1);
-    //       setTimeout(() => {
-    //         this.spin(winner, layer);
-    //       }, [this.animationTiming[layer - 1] + 1] * 1000);
-    //     }, [this.animationTiming[layer - 2] + 1] * 1000);
-    //     break;
-
-    //   default:
-    //     console.log("something went wrong");
-    //     break;
-    // }
   };
 }
